@@ -22,4 +22,11 @@ variable "private_subnet_b_cidr" {
   description = "CIDR block for private subnet in AZ-b"
   default     = "10.0.2.0/24"
 }
+variable "ami_id" {
+  default = "ami-0c02fb55956c7d316" # Amazon Linux 2 us-east-1
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
 
