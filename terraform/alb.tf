@@ -6,13 +6,14 @@ resource "aws_lb" "app_alb" {
 
   subnets = [
     aws_subnet.public.id,
-    aws_subnet.private_b.id
+    aws_subnet.public_b.id
   ]
 
   tags = {
     Name = "app-alb"
   }
 }
+
 resource "aws_lb_listener" "http_listener" {
   load_balancer_arn = aws_lb.app_alb.arn
   port              = 80
